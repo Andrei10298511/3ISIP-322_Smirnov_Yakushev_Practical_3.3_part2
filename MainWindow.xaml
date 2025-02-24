@@ -1,0 +1,40 @@
+﻿<Window x:Class="OhmsLawCalculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Применение закона Ома" Height="250" Width="400">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Группа с текстовыми полями -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,5">
+            <Label Name="Label1" Content="Напряжение (Вольт):" Width="160"/>
+            <TextBox Name="Input1TextBox" Width="100"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,5">
+            <Label Name="Label2" Content="Сопротивление (Ом):" Width="160"/>
+            <TextBox Name="Input2TextBox" Width="100"/>
+        </StackPanel>
+
+        <!-- Группа RadioButton -->
+        <GroupBox Header="Вычисляемая величина" Grid.Row="2" Margin="0,5">
+            <StackPanel Name="CalculationSelection">
+                <RadioButton Name="CurrentRadio" Content="Сила тока" Checked="RadioButton_Checked"/>
+                <RadioButton Name="VoltageRadio" Content="Напряжение" Checked="RadioButton_Checked"/>
+                <RadioButton Name="ResistanceRadio" Content="Сопротивление" Checked="RadioButton_Checked"/>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- Кнопка вычисления -->
+        <Button Name="CalculateButton" Content="Вычислить" Grid.Row="3" Width="100" Click="CalculateButton_Click" Margin="0,10"/>
+
+        <!-- Результат -->
+        <Label Name="ResultLabel" Grid.Row="4" FontSize="14" Foreground="Red" Content="Результат = "/>
+    </Grid>
+</Window>
