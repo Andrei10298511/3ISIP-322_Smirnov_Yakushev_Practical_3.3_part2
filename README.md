@@ -4,3 +4,5 @@
 - Стек вызовов.
 2. Ручного тестирования.
 - Точки останова.
+![image](https://github.com/user-attachments/assets/ef2810bc-92f4-4f4a-b547-11c441c3843a)
+
